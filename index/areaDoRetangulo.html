@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto JS/main.css">
+    <script src="/Projeto JS/script.js"></script>
+    <title>Área do Retângulo</title>
+</head>
+<body>
+    <div class="div">
+        Insira a base do retângulo em cm: <br><input class="base" type="number"> <br><br>
+        Insira a altura do retângulo em cm: <br><input class="alt" type="number"> <br><br>
+        <button onclick="areaRetangulo()">Calcular</button>
+        <p class="area"></p>
+    </div>
+    <script>
+        function areaRetangulo(){
+            var base = document.querySelector(".base").value
+            var alt = document.querySelector(".alt").value
+            var area = parseInt(base * alt)
+            document.querySelector(".area").innerHTML = `A aréa 
+            do retângulo é: ${area} cm2.`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto JS/main.css">
+    <script src="/Projeto JS/script.js"></script>
+    <title>Peso ideal</title>
+</head>
+<body>
+    <div class="div">
+        Insira o seu sexo: (Masculino - Feminino) <br><input type="text" class="sexo"> <br><br>
+        Insira a sua altura em metros(x.xx): <br><input type="number" class="altura"> <br><br>
+        <button onclick="pesoIdeal()">Verificar</button>
+        <p class="imprimir"></p>
+    </div>
+    <script>
+        function pesoIdeal(){
+            var sexo = document.querySelector(".sexo").value.toUpperCase()
+            var altura = document.querySelector(".altura").value
+                if (sexo === "MASCULINO"){
+                    var calculoMasculino = (72.7 * altura) - 58
+                    document.querySelector(".imprimir").innerHTML = `O seu peso 
+                    ideal é: ${calculoMasculino.toFixed(2)}`
+                }else if (sexo === "FEMININO") {
+                    var calculoFeminino = (62.1 * altura) - 44.7
+                    document.querySelector(".imprimir").innerHTML = `O seu peso 
+                    ideal é: ${calculoFeminino.toFixed(2)}`
+                }else{
+                    document.querySelector(".imprimir").innerHTML = `Valor 
+                    Inválido. Tente Novamente!`
+                }
+        }
+
+    </script>
+</body>
+</html>

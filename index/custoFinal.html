@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto JS/main.css">
+    <script src="/Projeto JS/script.js"></script>
+    <title>Custo Final Consumidor</title>
+</head>
+<body>
+    <div class="div">
+        Insira o custo de fábrica: <input class="custo" type="number"> <br><br>
+        <button onclick="custo()">Calcular</button>
+        <p class="custoFinal"></p>
+    </div>
+    <script>
+        function custo(){
+            var custoFabrica = document.querySelector(".custo").value
+            var distribuidor = custoFabrica * (28/100)
+            var impostos = custoFabrica * (45/100)
+            var custoFinal = Number(custoFabrica +++ distribuidor +++ impostos)
+            document.querySelector(".custoFinal").innerHTML = `O custo final
+            do consumidor é R$ ${custoFinal}.`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto JS/main.css">
+    <script src="/Projeto JS/script.js"></script>
+    <title>Comparar Times</title>
+</head>
+
+<body>
+    <div class="div">
+        Insira o nome do time: <br><input type="text" class="time1"><br><br>
+        Insira o número de gols: <br><input type="number" class="num1"><br><br>
+        Insira o nome do time: <br><input type="text" class="time2"><br><br>
+        Insira o número de gols: <br><input type="number" class="num2"><br><br>
+        <button onclick="compararTimes()">Enviar</button>
+        <p class="saida"></p>
+    </div>
+    <script>
+        function compararTimes(){
+
+        let time1 = document.querySelector(".time1").value;
+        let time2 = document.querySelector(".time2").value;
+        let num1 = Number(document.querySelector(".num1").value);
+        let num2 = Number(document.querySelector(".num2").value);
+
+        if(num1 > num2){
+            document.querySelector(".saida").innerHTML = `O time ${time1} ganhou a partida por ${num1} x ${num2}`;
+        } else if(num2 > num1){
+            document.querySelector(".saida").innerHTML = `O time ${time2} ganhou a partida por ${num2} x ${num1}`;
+        } else{
+            document.querySelector(".saida").innerHTML = `O time ${time1} e o time ${time2} empataram a partida por ${num1} x ${num2}`;
+        }
+    }
+    </script>
+</body>
+</html>

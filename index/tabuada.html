@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto JS/main.css">
+    <script src="/Projeto JS/script.js"></script>
+    <title>Tabuada</title>
+</head>
+<body>
+    <div class="div">
+        Insira qual tabuada deseja ver: <br><input type="number" class="num"><br><br>
+        Insira a operação: (Soma, Subtração, Multiplicação, Divisão)<br><input type="text" class="op"><br><br>
+        <button onclick="tabuada()">Enviar</button><br><br>
+        <div class="resposta"></div>
+    </div>
+    <script>
+        function tabuada(){
+            const num = parseInt(document.querySelector(".num").value);
+            const op = document.querySelector(".op").value.toUpperCase();
+            let tabuada = '';
+            if(op == "MULTIPLICAÇÃO"){
+                for(let i = 0; i <= 10; i++){
+                    tabuada += `${num} x ${i} = ${num * i} <br> `
+                    document.querySelector(".resposta").innerHTML = tabuada;
+                }
+            } else if(op == "DIVISÃO"){
+                for(let i = 0; i <= 10; i++){
+                    tabuada += `${num} / ${i} = ${(num / i).toFixed(2)} <br> `
+                    document.querySelector(".resposta").innerHTML = tabuada;
+                }
+            } else if (op === "SOMA"){
+                for(let i = 0; i <= 10; i++){
+                    tabuada += `${num} + ${i} = ${num + i} <br> `
+                    document.querySelector(".resposta").innerHTML = tabuada;
+                }
+            } else if(op == "SUBTRAÇÃO"){
+                for(let i = 0; i <= 10; i++){
+                    tabuada += `${num} - ${i} = ${num - i} <br> `
+                    document.querySelector(".resposta").innerHTML = tabuada;
+                }
+            } else {
+                document.querySelector(".resposta").innerHTML = "VALOR INVÁLIDO!";
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto JS/main.css">
+    <script src="/Projeto JS/script.js"></script>
+    <title>Porcentagem de Votos</title>
+</head>
+<body>
+    <div class="div">
+        Insira a quantidade de eleitores: <input class="total" type="number"> <br><br>
+        Votos válidos: <input class="val" type="number"> <br><br>
+        Votos brancos: <input class="bran" type="number"> <br><br>
+        Votos nulos: <input class="nul" type="number"> <br><br>
+        <button onclick="porcentagemVotos()">Calcular</button>
+        <p class="porcentagem"></p>
+    </div>
+    <script>
+        function porcentagemVotos(){
+            var eleitores = document.querySelector(".total").value
+            var votosValidos = document.querySelector(".val").value
+            var votosBrancos = document.querySelector(".bran").value
+            var votosNulos = document.querySelector(".nul").value
+            var porcentagemValidos = parseInt((votosValidos/eleitores)*100)
+            var porcentagemBrancos = parseInt((votosBrancos/eleitores)*100)
+            var porcentagemNulos = parseInt((votosNulos/eleitores)*100)
+            document.querySelector(".porcentagem").innerHTML = `Porcentagem:<br>
+            Votos Válidos: ${porcentagemValidos}%.
+            Votos Brancos: ${porcentagemBrancos}%.
+            Votos Nulos: ${porcentagemNulos}%.`
+        }
+    </script>
+</body>
+</html>

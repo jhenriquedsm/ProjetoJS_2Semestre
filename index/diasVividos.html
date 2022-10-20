@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto JS/main.css">
+    <script src="/Projeto JS/script.js"></script>
+    <title>Dias Vividos</title>
+</head>
+<body>
+    <div class="div">
+        Insira a sua idade: <br><br>
+        Anos: <input class="anos" type="number"> <br><br>
+        Meses: <input class="meses" type="number"> <br><br>
+        Dias: <input class="dias" type="number"> <br><br>
+        <button onclick="diasVividos()">Calcular</button>
+        <p class="aréa"></p>
+    </div>
+    <script>
+        function diasVividos(){
+            var anos = document.querySelector(".anos").value
+            var meses = document.querySelector(".meses").value
+            var dias = document.querySelector(".dias").value
+            var anosEmDias = parseInt(anos * 365)
+            var mesesEmDias = parseInt(meses * 30)
+            var diasTotais = parseInt(anosEmDias + mesesEmDias + dias)
+            document.querySelector(".aréa").innerHTML = `Você 
+            tem ${diasTotais} dias vividos.`
+        }
+    </script>
+</body>
+</html>

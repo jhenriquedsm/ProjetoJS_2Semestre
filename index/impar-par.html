@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto JS/main.css">
+    <script src="/Projeto JS/script.js"></script>
+    <title>Ímpar ou Par</title>
+</head>
+<body>
+    <div class="div">
+        Insira um número para verificar se é par ou ímpar: <br><input type="number" class="num"><br><br>
+        <button onclick="impar_par()">Verificar</button>
+        <p class="imprimir"></p>
+    </div>
+    <script>
+        function impar_par(){
+            var num = document.querySelector(".num").value 
+            if (num % 2 === 0){
+                document.querySelector(".imprimir").innerHTML = `O número ${num}
+                é par`
+            } else {
+                document.querySelector(".imprimir").innerHTML = `O número ${num}
+                é ímpar`
+            }
+        }
+
+    </script>
+</body>
+</html>

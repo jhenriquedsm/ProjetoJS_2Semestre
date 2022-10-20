@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto JS/main.css">
+    <script src="/Projeto JS/script.js"></script>
+    <title>Reajuste Salarial</title>
+</head>
+<body>
+    <div class="div">
+        Insira o salário do funcionário: <input class="salario" type="number"> <br><br>
+        Insira o valor do percentual de reajuste: <input class="reajuste" type="number"> <br><br>
+        <button onclick="reajusteSalarial()">Calcular</button>
+        <p class="salarioReajustado"></p>
+    </div>
+    <script>
+        function reajusteSalarial(){
+            var salarioMensal = document.querySelector(".salario").value
+            var reajuste = document.querySelector(".reajuste").value
+            var reajuste2 = Number((reajuste * salarioMensal) / 100)
+            var salarioReajustado = Number(salarioMensal +++ reajuste2)
+            document.querySelector(".salarioReajustado").innerHTML = `O valor do sálário
+            mensal com os ${reajuste}% de reajuste adicional é R$ ${salarioReajustado} reais.`
+        }
+    </script>
+</body>
+</html>

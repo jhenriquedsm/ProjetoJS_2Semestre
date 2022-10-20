@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto JS/main.css">
+    <script src="/Projeto JS/script.js"></script>
+    <title>Maior Número</title>
+</head>
+<body>
+    <div class="div">
+        <h2>Maior Número</h2>
+        <button onclick="maiorNumero()">Iniciar</button>
+        <p class="imprimir"></p>
+    </div>
+    <script>
+        function maiorNumero() {
+        const array = [];
+        for (let i = 0; i < 5; i++) {
+            const num = Number(prompt("Digite um número: "));
+            const modulo = Math.abs(num);
+            array.push(modulo);
+        }
+        document.querySelector(".imprimir").innerHTML = `Maior número: 
+        ${Math.max(...array)} <br>`;
+}
+
+    </script>
+</body>
+</html>

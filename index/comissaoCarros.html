@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projeto JS/main.css">
+    <script src="/Projeto JS/script.js"></script>
+    <title>Comissão Carros</title>
+</head>
+<body>
+    <div class="div">
+        Insira o número de carros vendidos: <input class="carrosVendidos" type="number"> <br><br>
+        Insira o valor total das vendas: <input class="totalVendas" type="number"> <br><br>
+        Insira o salário do funcionário: <input class="salario" type="number"> <br><br>
+        Insira o valor da comissão por carro vendido: (%) <input class="comissão" type="number"> <br><br>
+        <button onclick="comissaoCarros()">Calcular</button>
+        <p class="salarioFinal"></p>
+    </div>
+    <script>
+        function comissaoCarros(){
+            var carrosVendidos = document.querySelector(".carrosVendidos").value 
+            var totalVendas = document.querySelector(".totalVendas").value
+            var salario = document.querySelector(".salario").value
+            var comissao = document.querySelector(".comissão").value
+            comissao2 = (totalVendas) * (carrosVendidos * (comissao/100))
+            comissaoVendas = totalVendas * 0.05
+            var salarioFinal = Number(salario +++ comissao2 +++ comissaoVendas)
+            document.querySelector(".salarioFinal").innerHTML = `O salário final
+            do funcionário é R$ ${salarioFinal}.`
+        }
+    </script>
+</body>
+</html>

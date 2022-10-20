@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/Projeto JS/main.css">
+   <script src="/Projeto JS/script.js"></script>
+   <title>IMC</title>
+</head>
+<body>
+    <div class="div">
+        Insira o seu peso: <br><input type="number" class="peso"><br>
+        Insira a sua altura(x.xx): <br><input type="number" class="altura"><br><br>
+        <button onclick="imc()">Verificar</button>
+        <p class="imprimir"></p>
+        <p class="IMC"></p> 
+    </div>
+   <script>
+    function imc(){
+       var peso = document.querySelector(".peso").value 
+       var altura = document.querySelector(".altura").value 
+       var imc = peso / (altura * altura)
+
+        if (imc < 18.5) {
+            document.querySelector(".imprimir").innerHTML = "Você está em nível de magreza."
+        }else if(imc >= 18.5 && imc <= 24.9) {
+            document.querySelector(".imprimir").innerHTML = "Você está dentro do peso normal."
+        }else if(imc >= 25.0 && imc <= 29.9) {
+            document.querySelector(".imprimir").innerHTML = "Você está um pouco acima do peso."
+        }else if (imc >= 30 && imc <= 39.9) {
+            document.querySelector(".imprimir").innerHTML = "Você está com Obesidade."
+        }else if (imc >= 40.0) {
+            document.querySelector(".imprimir").innerHTML = "Você está com Obesidade Grave."
+        }else{
+            document.querySelector(".imprimir").innerHTML = "Valor inválido!"
+        }
+
+        document.querySelector(".IMC").innerHTML = `Seu imc é: ${imc.toFixed(2)}`
+    }
+     
+   </script>
+</body>
+</html>
