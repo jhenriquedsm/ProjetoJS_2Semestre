@@ -15,7 +15,7 @@ body{
 }
 
 .div{
-    background-color: #7c40ff;
+    background-image: linear-gradient(to right, #6a39d4 , #874ba3);
     padding: 50px 50px;
 
 }

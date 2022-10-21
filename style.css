@@ -27,6 +27,9 @@ h1{
     margin-top: 0;
 }
 
+div{
+    background-image: linear-gradient(to right, #6a39d4 , #733d8b);
+}
 .row-1{
     background-color: #6d2aff;
     padding: 50px 50px;
