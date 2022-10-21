@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Trispace:wght@500;800&display=swap');
+
 html{
     height: 100%;
     width: 100%;
@@ -12,6 +14,7 @@ body{
     width: 17em;
     position: relative;
     margin-top: 15%;
+    font-family: 'Trispace', sans-serif;
 }
 
 .div{
@@ -20,12 +23,16 @@ body{
 
 }
 
+button{
+  font-family: 'Trispace', sans-serif;
+}
+
 .buttonPurple {
     background: rgb(96,9,240);
     background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
     border: none;
     color: #FFF;
-    width: 70px;
+    width: 80px;
     height: 30px;
     border-radius: 10px;
     

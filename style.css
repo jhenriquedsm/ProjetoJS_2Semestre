@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Trispace:wght@500;800&display=swap');
+
 html{
     height: 100%;
     width: 100%;
@@ -13,12 +15,14 @@ body{
     width: 100%;
     position: relative;
     margin: 70px 0px;
+    font-family: 'Trispace', sans-serif;
 }
 
 button{
     background: #000;
     color: #fff;
     margin: 5px;
+    font-family: 'Trispace', sans-serif;
 }
 
 h1{
